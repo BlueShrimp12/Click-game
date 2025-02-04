@@ -1,0 +1,33 @@
+<!DOCTYPE html>  <!-- HTML5の文書であることを宣言 -->
+<html lang="ja">  <!-- HTMLの開始タグ。lang="ja"は日本語のページであることを指定 -->
+
+<head>  <!-- ヘッダー部分（ページのメタ情報などを設定） -->
+    <meta charset="UTF-8">  <!-- 文字エンコーディングをUTF-8に設定（日本語対応） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- スマホでも表示が崩れないようにする設定 -->
+    <title>クリックゲーム</title>  <!-- ページのタイトル（タブに表示される） -->
+</head>
+
+<body>  <!-- ページの本体部分 -->
+
+    <h1>クリックゲーム</h1>  <!-- 見出し（大きなタイトル） -->
+
+    <p>スコア: <span id="score">0</span></p>  
+    <!-- スコアを表示する部分。<span>の中身をJavaScriptで変更する -->
+
+    <button onclick="increaseScore()">クリック！</button>  
+    <!-- クリックボタン。押すとincreaseScore()関数が実行される -->
+
+    <script>  <!-- JavaScriptを記述するエリア（プログラムの処理を書く） -->
+
+        let score = 0;  // スコアを保存する変数。最初は0
+
+        function increaseScore() {  // ボタンがクリックされたときに呼び出される関数
+            score++;  // スコアを1増やす
+            document.getElementById("score").textContent = score;  
+            // スコアをHTMLの<span id="score">の中に反映する
+        }
+
+    </script>
+
+</body>
+</html>
